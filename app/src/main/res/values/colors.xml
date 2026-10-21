@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#0F172A</color>
+    <color name="primary_variant">#1E293B</color>
+    <color name="accent">#0284C7</color>
+    <color name="accent_light">#38BDF8</color>
+    <color name="accent_glow">#200284C7</color>
+    <color name="background">#F8FAFC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_card">#F1F5F9</color>
+    <color name="surface_card_border">#E2E8F0</color>
+    <color name="surface_highlight">#E2E8F0</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="status_green">#059669</color>
+    <color name="status_green_glow">#20059669</color>
+    <color name="status_amber">#D97706</color>
+    <color name="status_red">#DC2626</color>
+    <color name="status_red_bg">#FEE2E2</color>
+    <color name="status_slate">#64748B</color>
+    <color name="card_you_bg">#F0F9FF</color>
+    <color name="card_you_border">#BAE6FD</color>
+    <color name="card_remote_bg">#F5F3FF</color>
+    <color name="card_remote_border">#DDD6FE</color>
+    <color name="badge_bg">#E2E8F0</color>
+    <color name="button_selected_text">#FFFFFF</color>
+</resources>

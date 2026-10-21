@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">iTantra</string>
+    <string name="app_subtitle">Offline Multilingual Voice Transceiver</string>
+    <string name="title_m1_core">iTantra Core STT Pipeline</string>
+    <string name="desc_m1_foundation">Neural Transceiver Radio Access Foundation</string>
+
+    <!-- Connection & State Statuses -->
+    <string name="status_ready">Ready</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_offline">Offline</string>
+    <string name="status_listening">Listening…</string>
+    <string name="status_processing">Processing speech…</string>
+    <string name="status_sending">Sending…</string>
+    <string name="status_receiving">Receiving…</string>
+    <string name="status_speaking">Speaking…</string>
+    <string name="status_error">Error</string>
+
+    <!-- Section Headings -->
+    <string name="section_role_title">COMMUNICATION ROLE / LINK</string>
+    <string name="section_language_title">SPEECH &amp; SYNTHESIS LANGUAGE</string>
+    <string name="role_server">📡 Receiver</string>
+    <string name="role_client">📤 Transmitter</string>
+    <string name="server_listening_hint">Listening on TCP port 42173 (Ready to receive speech from peer)</string>
+    <string name="btn_connect">Connect</string>
+    <string name="hint_peer_ip">Peer IP (e.g. 172.20.84.74)</string>
+
+    <!-- Language Selector -->
+    <string name="lang_label">Language:</string>
+    <string name="lang_en">🇬🇧 English</string>
+    <string name="lang_hi">🇮🇳 हिन्दी</string>
+
+    <!-- Conversation Cards -->
+    <string name="card_you_header">🗣️ YOU (Transmitted)</string>
+    <string name="card_you_empty">Waiting for transmission</string>
+    <string name="card_remote_header">🌐 REMOTE (Received)</string>
+    <string name="card_remote_empty">No message received yet</string>
+    <string name="playback_tts_badge">🔊 Played through offline neural TTS</string>
+
+    <!-- PTT Controls & Accessibility -->
+    <string name="ptt_idle">🎙️ Push to Talk</string>
+    <string name="ptt_listening">🔴 Listening for speech…</string>
+    <string name="ptt_stop">🔴 Tap to Stop</string>
+    <string name="desc_ptt_button">Microphone transceiver control</string>
+    <string name="desc_lang_en">Select English language</string>
+    <string name="desc_lang_hi">Select Hindi language</string>
+    <string name="desc_connection_indicator">Transceiver connection state</string>
+    <string name="desc_app_logo">iTantra Application Logo</string>
+    <string name="desc_theme_toggle">Toggle theme mode between System Default, Light, and Dark</string>
+    <string name="theme_system">⚙️ System</string>
+    <string name="theme_light">☀️ Light</string>
+    <string name="theme_dark">🌙 Dark</string>
+</resources>

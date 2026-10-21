@@ -1,0 +1,191 @@
+[
+  {
+    "condition": "A (5 cm)",
+    "full_path": "scratch/same_sentence_5cm.wav",
+    "sha256_full": "1483aa49801af5d495b3a404bf63a769f439fb2b786197cb9474eccede0e2d82",
+    "crop_path": "scratch/same_sentence_5cm_crop.wav",
+    "sha256_crop": "deb94929c273d8c206893f61299f8ca4c0cd7c22d2c8362f08153e005a2259da",
+    "signal": {
+      "sample_count": 128000,
+      "duration_sec": 8.0,
+      "mean": -2.4866554375272534,
+      "std_dev": 1234.1449591421526,
+      "rms": 1234.1474642972169,
+      "rms_dbfs": -28.481657594321778,
+      "peak_abs": 12135.566997742371,
+      "peak_dbfs": -8.627797254375592,
+      "crest_factor": 9.833157988663007,
+      "clipping_count": 0,
+      "zero_pct": 1.421875,
+      "pct_above_m40": 63.5609375,
+      "pct_above_m30": 23.35703125,
+      "pct_above_m20": 3.08046875,
+      "pct_above_m10": 0.0046875
+    },
+    "vad": {
+      "start_sample": 0,
+      "end_sample": 127488,
+      "start_ms": 0,
+      "end_ms": 7968,
+      "duration_ms": 7968,
+      "segment_count": 1
+    },
+    "signal_crop": {
+      "sample_count": 127488,
+      "duration_sec": 7.968,
+      "mean": -2.496642005549451,
+      "std_dev": 1236.620668618737,
+      "rms": 1236.623188880249,
+      "rms_dbfs": -28.464250978558766,
+      "peak_abs": 12135.566997742371,
+      "peak_dbfs": -8.627797254375592,
+      "crest_factor": 9.813471966938463,
+      "clipping_count": 0,
+      "zero_pct": 1.0259789156626504,
+      "pct_above_m40": 63.81620230923695,
+      "pct_above_m30": 23.450834588353413,
+      "pct_above_m20": 3.092840110441767,
+      "pct_above_m10": 0.00470632530120482
+    },
+    "stt_full": {
+      "hyp": "I need to go to the other side",
+      "latency_ms": 3129,
+      "rtf": 0.391,
+      "wer": 1.0,
+      "cer": 0.7543859649122807
+    },
+    "stt_crop": {
+      "hyp": "I need to start the presentation.",
+      "latency_ms": 3034,
+      "rtf": 0.381,
+      "wer": 1.0,
+      "cer": 0.8070175438596491
+    }
+  },
+  {
+    "condition": "B (15 cm)",
+    "full_path": "scratch/same_sentence_15cm.wav",
+    "sha256_full": "9a2a57b288514fac1f39bf49e24295a65d79911d4f14ef1e269519a8c9578a28",
+    "crop_path": "scratch/same_sentence_15cm_crop.wav",
+    "sha256_crop": "31610d0137203ed6320d8f77e642110609d0f666a6f5bc7b49bcbe61a0dfcf76",
+    "signal": {
+      "sample_count": 128000,
+      "duration_sec": 8.0,
+      "mean": -0.934578125,
+      "std_dev": 463.83783795967236,
+      "rms": 463.8387794906491,
+      "rms_dbfs": -36.98165759432145,
+      "peak_abs": 4561.0,
+      "peak_dbfs": -17.127797254375594,
+      "crest_factor": 9.83315798866263,
+      "clipping_count": 0,
+      "zero_pct": 1.421875,
+      "pct_above_m40": 28.921093749999997,
+      "pct_above_m30": 4.6140625,
+      "pct_above_m20": 0.03125,
+      "pct_above_m10": 0.0
+    },
+    "vad": {
+      "start_sample": 6656,
+      "end_sample": 127488,
+      "start_ms": 416,
+      "end_ms": 7968,
+      "duration_ms": 7552,
+      "segment_count": 1
+    },
+    "signal_crop": {
+      "sample_count": 120832,
+      "duration_sec": 7.552,
+      "mean": -0.930465439618644,
+      "std_dev": 475.6833445139416,
+      "rms": 475.68425453645574,
+      "rms_dbfs": -36.762623174731786,
+      "peak_abs": 4561.0,
+      "peak_dbfs": -17.127797254375594,
+      "crest_factor": 9.588292983219716,
+      "clipping_count": 0,
+      "zero_pct": 1.0642876059322035,
+      "pct_above_m40": 30.29329978813559,
+      "pct_above_m30": 4.887778072033899,
+      "pct_above_m20": 0.03310381355932203,
+      "pct_above_m10": 0.0
+    },
+    "stt_full": {
+      "hyp": "I need to go to the other side",
+      "latency_ms": 3178,
+      "rtf": 0.397,
+      "wer": 1.0,
+      "cer": 0.7543859649122807
+    },
+    "stt_crop": {
+      "hyp": "I need to see how many times I'm going to do this.",
+      "latency_ms": 3946,
+      "rtf": 0.523,
+      "wer": 1.0833333333333333,
+      "cer": 0.8070175438596491
+    }
+  },
+  {
+    "condition": "C (30 cm)",
+    "full_path": "scratch/same_sentence_30cm.wav",
+    "sha256_full": "4d893773450f8e1254ec48a177375773018fe91ad7c3ca05fc16ac32b696c7f5",
+    "crop_path": "scratch/same_sentence_30cm_crop.wav",
+    "sha256_crop": "12d756e6750df168ee24312d2df0d8a379b1f28df2ffa9ae5d60661ed4d288f6",
+    "signal": {
+      "sample_count": 128000,
+      "duration_sec": 8.0,
+      "mean": -0.46839862507731705,
+      "std_dev": 232.4696028586641,
+      "rms": 232.4700747419697,
+      "rms_dbfs": -42.98165759432141,
+      "peak_abs": 2285.9149725739885,
+      "peak_dbfs": -23.127797254375594,
+      "crest_factor": 9.833157988662588,
+      "clipping_count": 0,
+      "zero_pct": 1.421875,
+      "pct_above_m40": 11.02578125,
+      "pct_above_m30": 0.52734375,
+      "pct_above_m20": 0.0,
+      "pct_above_m10": 0.0
+    },
+    "vad": {
+      "start_sample": 21504,
+      "end_sample": 127488,
+      "start_ms": 1344,
+      "end_ms": 7968,
+      "duration_ms": 6624,
+      "segment_count": 1
+    },
+    "signal_crop": {
+      "sample_count": 105984,
+      "duration_sec": 6.624,
+      "mean": -0.4609443350938357,
+      "std_dev": 250.14303999831415,
+      "rms": 250.14346469431948,
+      "rms_dbfs": -42.3452154813915,
+      "peak_abs": 2285.9149725739885,
+      "peak_dbfs": -23.127797254375594,
+      "crest_factor": 9.138415730218753,
+      "clipping_count": 0,
+      "zero_pct": 1.187915157004831,
+      "pct_above_m40": 13.1868961352657,
+      "pct_above_m30": 0.6368885869565217,
+      "pct_above_m20": 0.0,
+      "pct_above_m10": 0.0
+    },
+    "stt_full": {
+      "hyp": "[inaudible]",
+      "latency_ms": 2357,
+      "rtf": 0.295,
+      "wer": 1.0,
+      "cer": 0.8947368421052632
+    },
+    "stt_crop": {
+      "hyp": "I need to get the question.",
+      "latency_ms": 2701,
+      "rtf": 0.408,
+      "wer": 1.0,
+      "cer": 0.8245614035087719
+    }
+  }
+]

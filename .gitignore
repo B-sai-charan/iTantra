@@ -1,0 +1,90 @@
+# ==============================================================================
+# iTantra Workspace Root .gitignore (SIH 2026 - PS26173)
+# Configured for clean GitHub backup (respecting GitHub 100MB file limit)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment & Local Configuration
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.local
+local.properties
+
+# ------------------------------------------------------------------------------
+# 2. Android Gradle Build Artifacts & Binaries
+# ------------------------------------------------------------------------------
+.gradle/
+.kotlin/
+build/
+**/build/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ------------------------------------------------------------------------------
+# 3. IDE, OS & Local User Files
+# ------------------------------------------------------------------------------
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Nn]esktop.ini
+
+# ------------------------------------------------------------------------------
+# 4. Python Virtual Environments, Bytecode & Testing Artifacts
+# ------------------------------------------------------------------------------
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# ------------------------------------------------------------------------------
+# 5. Heavy Temporary Crash & Log Files
+# ------------------------------------------------------------------------------
+*.log
+
+# ------------------------------------------------------------------------------
+# 6. Monolithic Historical Backup Archives (>100 MB GitHub Limit)
+# GitHub blocks pushes containing any single file > 100 MB.
+# Active source code, models, assets, and configs remain safely tracked.
+# ------------------------------------------------------------------------------
+*.bundle
+M3/Dr. Vaseegaran.zip
+scratch/backup/*.apk
+
+# ------------------------------------------------------------------------------
+# 7. CRITICAL PRESERVATION SAFEGUARDS (DO NOT IGNORE)
+# Explicitly keep models, audio, presentations, templates & code
+# ------------------------------------------------------------------------------
+!gradle.properties
+!*.json
+!*.wav
+!*.mp3
+!*.pptx
+!*.pdf
+!*.py
+!*.kt
+!*.java
+!*.xml
+!*.png
+!*.jpeg
+!*.jpg
+!*.md
+!*.txt
+!*.gradle.kts
+local.properties

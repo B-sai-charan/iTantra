@@ -1,0 +1,276 @@
+{
+  "profiles": {
+    "reference": {
+      "path": "app/src/main/assets/speech_test.wav",
+      "signal": {
+        "sample_rate": 16000,
+        "channels": 1,
+        "sample_count": 106000,
+        "duration_s": 6.625,
+        "rms": 1543.085497839154,
+        "rms_dbfs": -26.541198904942753,
+        "peak_abs": 17529,
+        "peak_dbfs": -5.433855878595759,
+        "clipping_count": 0,
+        "zero_pct": 0.2509433962264151,
+        "mean": -3.2328490566037735,
+        "std_dev": 1543.0821113370755,
+        "crest_factor": 11.359707562896922
+      },
+      "vad": {
+        "start_sample": 5120,
+        "end_sample": 98816,
+        "start_ms": 320,
+        "end_ms": 6176,
+        "duration_ms": 5856
+      },
+      "spectral_full": {
+        "spectral_centroid_hz": 1312.8916396544314,
+        "spectral_bandwidth_hz": 1331.0019448570686,
+        "spectral_rolloff_hz": 2515.3601694915255,
+        "spectral_flatness": 0.2438648914856976,
+        "zero_crossing_rate": 0.08797259326298414
+      },
+      "spectral_speech": {
+        "spectral_centroid_hz": 1275.3852768306278,
+        "spectral_bandwidth_hz": 1234.964293820181,
+        "spectral_rolloff_hz": 2331.421232876712,
+        "spectral_flatness": 0.21808778809455281,
+        "zero_crossing_rate": 0.09265742701659374
+      },
+      "bands_speech": {
+        "0\u2013250 Hz": {
+          "low_hz": 0.0,
+          "high_hz": 250.0,
+          "abs_energy": 9993.50404519687,
+          "percentage": 22.217802300867522
+        },
+        "250\u2013500 Hz": {
+          "low_hz": 250.0,
+          "high_hz": 500.0,
+          "abs_energy": 13814.142047831343,
+          "percentage": 30.71193803362009
+        },
+        "500\u20131000 Hz": {
+          "low_hz": 500.0,
+          "high_hz": 1000.0,
+          "abs_energy": 15470.350528064051,
+          "percentage": 34.394061182458586
+        },
+        "1000\u20132000 Hz": {
+          "low_hz": 1000.0,
+          "high_hz": 2000.0,
+          "abs_energy": 4807.611149259866,
+          "percentage": 10.688398540754077
+        },
+        "2000\u20134000 Hz": {
+          "low_hz": 2000.0,
+          "high_hz": 4000.0,
+          "abs_energy": 793.1317745986873,
+          "percentage": 1.7633099348210362
+        },
+        "4000\u20138000 Hz": {
+          "low_hz": 4000.0,
+          "high_hz": 8000.0,
+          "abs_energy": 100.97496446568682,
+          "percentage": 0.22449000747780828
+        }
+      },
+      "whisper_log_mel_stats": {
+        "frames": 583,
+        "n_mels": 80,
+        "mean": -2.0468623740697036,
+        "std_dev": 1.9170795309591688,
+        "min": -10.0,
+        "max": 2.45059669973184
+      }
+    },
+    "live_mic": {
+      "path": "scratch/same_sentence_reference_vs_mic.wav",
+      "signal": {
+        "sample_rate": 16000,
+        "channels": 1,
+        "sample_count": 128000,
+        "duration_s": 8.0,
+        "rms": 463.8387794906491,
+        "rms_dbfs": -36.98165759432145,
+        "peak_abs": 4561,
+        "peak_dbfs": -17.127797254375594,
+        "clipping_count": 0,
+        "zero_pct": 1.421875,
+        "mean": -0.934578125,
+        "std_dev": 463.83783795967236,
+        "crest_factor": 9.83315798866263
+      },
+      "vad": {
+        "start_sample": 6656,
+        "end_sample": 127488,
+        "start_ms": 416,
+        "end_ms": 7968,
+        "duration_ms": 7552
+      },
+      "spectral_full": {
+        "spectral_centroid_hz": 1647.2710279357009,
+        "spectral_bandwidth_hz": 1593.9725902158004,
+        "spectral_rolloff_hz": 3162.387274549098,
+        "spectral_flatness": 0.3861366813166441,
+        "zero_crossing_rate": 0.12314256693425957
+      },
+      "spectral_speech": {
+        "spectral_centroid_hz": 1646.074617406954,
+        "spectral_bandwidth_hz": 1597.3988487360798,
+        "spectral_rolloff_hz": 3159.1029723991505,
+        "spectral_flatness": 0.3846648690266987,
+        "zero_crossing_rate": 0.12253148358200264
+      },
+      "bands_speech": {
+        "0\u2013250 Hz": {
+          "low_hz": 0.0,
+          "high_hz": 250.0,
+          "abs_energy": 310.80276639936267,
+          "percentage": 6.362403266182691
+        },
+        "250\u2013500 Hz": {
+          "low_hz": 250.0,
+          "high_hz": 500.0,
+          "abs_energy": 1036.6897533797921,
+          "percentage": 21.2219419708976
+        },
+        "500\u20131000 Hz": {
+          "low_hz": 500.0,
+          "high_hz": 1000.0,
+          "abs_energy": 2826.317411267073,
+          "percentage": 57.857178483439355
+        },
+        "1000\u20132000 Hz": {
+          "low_hz": 1000.0,
+          "high_hz": 2000.0,
+          "abs_energy": 541.4804440409187,
+          "percentage": 11.08457619490178
+        },
+        "2000\u20134000 Hz": {
+          "low_hz": 2000.0,
+          "high_hz": 4000.0,
+          "abs_energy": 152.45660193265752,
+          "percentage": 3.1209193963256934
+        },
+        "4000\u20138000 Hz": {
+          "low_hz": 4000.0,
+          "high_hz": 8000.0,
+          "abs_energy": 17.243071494387966,
+          "percentage": 0.35298068825406886
+        }
+      },
+      "whisper_log_mel_stats": {
+        "frames": 753,
+        "n_mels": 80,
+        "mean": -2.23210239420394,
+        "std_dev": 1.4027726097482625,
+        "min": -10.0,
+        "max": 1.9662709617490766
+      }
+    },
+    "level_matched": {
+      "path": "scratch/same_sentence_level_matched.wav",
+      "signal": {
+        "sample_rate": 16000,
+        "channels": 1,
+        "sample_count": 128000,
+        "duration_s": 8.0,
+        "rms": 1543.084351449233,
+        "rms_dbfs": -26.541205357871025,
+        "peak_abs": 15173,
+        "peak_dbfs": -6.687569542742015,
+        "clipping_count": 0,
+        "zero_pct": 1.421875,
+        "mean": -3.109125,
+        "std_dev": 1543.0812191939976,
+        "crest_factor": 9.832903810961358
+      },
+      "vad": {
+        "start_sample": 0,
+        "end_sample": 127488,
+        "start_ms": 0,
+        "end_ms": 7968,
+        "duration_ms": 7968
+      },
+      "spectral_full": {
+        "spectral_centroid_hz": 1647.2786971974563,
+        "spectral_bandwidth_hz": 1593.9849142780085,
+        "spectral_rolloff_hz": 3162.199398797595,
+        "spectral_flatness": 0.386142714759026,
+        "zero_crossing_rate": 0.12314256693425957
+      },
+      "spectral_speech": {
+        "spectral_centroid_hz": 1653.907585314951,
+        "spectral_bandwidth_hz": 1600.399340492407,
+        "spectral_rolloff_hz": 3174.9245472837024,
+        "spectral_flatness": 0.3876966089834084,
+        "zero_crossing_rate": 0.12363811046317007
+      },
+      "bands_speech": {
+        "0\u2013250 Hz": {
+          "low_hz": 0.0,
+          "high_hz": 250.0,
+          "abs_energy": 3467.4601981778064,
+          "percentage": 6.367242654255456
+        },
+        "250\u2013500 Hz": {
+          "low_hz": 250.0,
+          "high_hz": 500.0,
+          "abs_energy": 11606.662908961776,
+          "percentage": 21.313132645716536
+        },
+        "500\u20131000 Hz": {
+          "low_hz": 500.0,
+          "high_hz": 1000.0,
+          "abs_energy": 31385.758177175845,
+          "percentage": 57.63317436401428
+        },
+        "1000\u20132000 Hz": {
+          "low_hz": 1000.0,
+          "high_hz": 2000.0,
+          "abs_energy": 6084.614503337771,
+          "percentage": 11.173081963770818
+        },
+        "2000\u20134000 Hz": {
+          "low_hz": 2000.0,
+          "high_hz": 4000.0,
+          "abs_energy": 1716.794405464546,
+          "percentage": 3.15252257915044
+        },
+        "4000\u20138000 Hz": {
+          "low_hz": 4000.0,
+          "high_hz": 8000.0,
+          "abs_energy": 196.50867623071224,
+          "percentage": 0.36084579309230347
+        }
+      },
+      "whisper_log_mel_stats": {
+        "frames": 794,
+        "n_mels": 80,
+        "mean": -1.2135761751378622,
+        "std_dev": 1.4962055369896223,
+        "min": -10.0,
+        "max": 2.9826854658137143
+      }
+    }
+  },
+  "spectrogram_comparisons": {
+    "ref_vs_live_mic": {
+      "cosine_distance": 0.18024972791609217,
+      "mean_absolute_diff": 1.2990366663200805,
+      "correlation": 0.5545685572655509
+    },
+    "ref_vs_level_matched": {
+      "cosine_distance": 0.2426290709652732,
+      "mean_absolute_diff": 1.4856566346242481,
+      "correlation": 0.5555570110271483
+    },
+    "live_mic_vs_level_matched": {
+      "cosine_distance": 0.11716483497652086,
+      "mean_absolute_diff": 1.0981226213265802,
+      "correlation": 0.8420320277188806
+    }
+  }
+}

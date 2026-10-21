@@ -1,0 +1,70 @@
+TestId,Category,Component,Description,InputOrCondition,ExpectedOutcome,ActualResult,Verdict,Severity
+TC-BASE-01,Baseline,Build,Unit Test Suite Execution,./gradlew testDebugUnitTest,408 tests pass with 0 failures,408 passed / 0 failed in 5.4s,PASS,N/A
+TC-BASE-02,Baseline,Build,Debug APK Compilation,./gradlew assembleDebug,APK built cleanly,300.82 MB APK built,PASS,N/A
+TC-BASE-03,Baseline,Hardware,Device A Discovery & Specs,adb -s 10BE830QG8000MX,iQOO Z9 (Android 14/15 8GB RAM),Online & responsive,PASS,N/A
+TC-BASE-04,Baseline,Hardware,Device B Discovery & Specs,adb -s HNP097HQ,Lenovo TB-X6C6F (Android 12 3GB RAM),Online via hotspot (10.179.231.149),PASS,N/A
+TC-NET-01,Network,Hotspot,Dynamic IP Discovery Device A,ip addr show wlan2,Assigned 10.179.231.166/24,10.179.231.166 assigned,PASS,N/A
+TC-NET-02,Network,Hotspot,Dynamic IP Discovery Device B,ip addr show wlan0,Assigned 10.179.231.149/24,10.179.231.149 assigned,PASS,N/A
+TC-NET-03,Network,Hotspot,Bidirectional Ping A -> B,ping -c 3 10.179.231.149,0% packet loss,3 packets transmitted 0% loss (56.1ms avg),PASS,N/A
+TC-NET-04,Network,Hotspot,Bidirectional Ping B -> A,ping -c 3 10.179.231.166,0% packet loss,3 packets transmitted 0% loss (17.1ms avg),PASS,N/A
+TC-NET-05,Network,Transport,TCP Server Port 42173 Listen,Server mode startup,Port 42173 listening on [::]:42173,Port 42173 active and listening,PASS,N/A
+TC-NET-06,Network,Transport,TCP Server Concurrent Bind Collision,onNewIntent re-triggers Server bind,Graceful handle or reuse socket,Throws BindException EADDRINUSE,FAIL,P2
+TC-LIFE-01,Lifecycle,Activity,Startup to Receiver Mode,App launch on Device A,Binds Server on 42173 and shows Ready,Bound and listening,PASS,N/A
+TC-LIFE-02,Lifecycle,Activity,Switch Receiver -> Transmitter,Tap Transmitter chip,Closes Server socket and switches UI,Server socket closed successfully,PASS,N/A
+TC-LIFE-03,Lifecycle,Activity,Transmitter with Empty IP,Tap Transmitter without IP,Stay in idle disconnected state,Falls back to ConnectionConfig.Server,FAIL,P2
+TC-LIFE-04,Lifecycle,Activity,Language Switch EN -> HI,Tap HI chip,Update Whisper/TTS target language,Full composition teardown & 1.5s reload,FAIL,P2
+TC-LIFE-05,Lifecycle,Activity,App Backgrounding during Capture,Press Home button while recording,Stop AudioRecord or use Foreground Service,AudioRecord runs in background unmanaged,FAIL,P2
+TC-LIFE-06,Lifecycle,Activity,False Positive Ready Indicator,Socket bind failure (EADDRINUSE),Show FAILED state,UI shows Ready and CONNECTED,FAIL,P1
+TC-LIFE-07,Lifecycle,Transport,Server closeInternal Scope Race,Server closeInternal(),Close active client socket cleanly,serverScope.cancel cancels client.close(),FAIL,P2
+TC-M2-01,Protocol,M2 Codec,Standard English Payload,Alpha One radio check (en),Decode accurately with CRC match,Decoded and verified,PASS,N/A
+TC-M2-02,Protocol,M2 Codec,Devanagari Hindi Payload,नमस्ते यह सामरिक परीक्षण है (hi),Decode UTF-8 Devanagari accurately,Decoded and verified,PASS,N/A
+TC-M2-03,Protocol,M2 Codec,Single Character Text,Text = 'A',Decode text len = 1 byte,Decoded and verified,PASS,N/A
+TC-M2-04,Protocol,M2 Codec,Emoji & Unicode Symbols,Mission Success 🚀 Target Secure 🎯,Decode multibyte UTF-8 symbols,Decoded and verified,PASS,N/A
+TC-M2-05,Protocol,M2 Codec,Mixed English-Hindi Text,Base station रिपोर्टिंग स्थिति normal,Decode hybrid UTF-8 text,Decoded and verified,PASS,N/A
+TC-M2-06,Protocol,M2 Codec,Special Punctuation & Quotes,Alert: \"Sector 4\" / (Grid 9-Alpha),Decode quotes & delimiters,Decoded and verified,PASS,N/A
+TC-M2-07,Protocol,M2 Codec,Extended BCP-47 Tag (en-IN),LanguageId=0xFE extTag='en-IN',Preserve exact extended tag string,Preserved verbatim,PASS,N/A
+TC-M2-08,Protocol,M2 Codec,Empty Text Payload,Text = '',Decode text len = 0,Decoded cleanly,PASS,N/A
+TC-M2-09,Protocol,M2 Codec,Maximum Text Payload (65535B),Text = 65535 bytes UTF-8,Encode and decode UInt16 max,Decoded cleanly,PASS,N/A
+TC-M2-10,Protocol,M2 Codec,Oversized Text (> 65535B),Text = 65536 bytes UTF-8,Throw ProtocolException,ProtocolException thrown,PASS,N/A
+TC-M2-11,Protocol,M2 Codec,Corrupted CRC-32 Checksum,XORed CRC with 0xDEADBEEF,Reject with CRC mismatch exception,ProtocolException thrown,PASS,N/A
+TC-M2-12,Protocol,M2 Codec,Invalid Magic Synchronizer,Magic = 0xDEAD,Reject invalid magic,ProtocolException thrown,PASS,N/A
+TC-M2-13,Protocol,M2 Codec,Invalid Protocol Version,Version = 0x99,Reject invalid version,ProtocolException thrown,PASS,N/A
+TC-M2-14,Protocol,M2 Codec,Invalid Message Type,MessageType = 0x7F,Reject unsupported message type,ProtocolException thrown,PASS,N/A
+TC-M2-15,Protocol,M2 Codec,Malformed UTF-8 Sequence,Bytes = [0xFF 0xFE 0xFD],Reject malformed UTF-8,ProtocolException thrown,PASS,N/A
+TC-M2-16,Protocol,M2 Codec,Trailing Bytes after CRC,Payload + 5 garbage bytes,Reject trailing bytes,ProtocolException thrown,PASS,N/A
+TC-M2-17,Protocol,Framing,Zero-Length Frame Header,Frame length = 0,Throw TransportException,TransportException thrown,PASS,N/A
+TC-M2-18,Protocol,Framing,Oversized Frame Header,Frame length = 70000,Throw TransportException,TransportException thrown,PASS,N/A
+TC-M2-19,Protocol,Framing,Stream EOF Truncation,Header truncated at 2 bytes,Throw TransportException EOF,TransportException thrown,PASS,N/A
+TC-ASR-01,ASR,Whisper STT,English Accuracy Benchmark,6 English standard cases,Low WER (< 15%) and RTF < 0.2,Corpus WER 8.29% CER 6.12% Mean RTF 0.0831,PASS,N/A
+TC-ASR-02,ASR,Whisper STT,English Inference Speed,61.8s audio on Dimensity CPU,Real-time processing,4.99s total inference (12x real-time),PASS,N/A
+TC-ASR-03,ASR,Whisper STT,Hindi Accuracy Benchmark,5 Hindi Devanagari cases,Devanagari text matching reference,Corpus WER 119.28% 0 hits (outputs Latin),FAIL,P1
+TC-ASR-04,ASR,Whisper STT,Hindi Inference Speed,37.4s Hindi audio on Dimensity CPU,Real-time processing,4.15s total inference (RTF 0.1108),PASS,N/A
+TC-ASR-05,ASR,Whisper STT,ASR Result Confidence Field,ASR inference output,Confidence field contract,SherpaWhisperAsrEngine returns null confidence,PASS,N/A
+TC-TTS-01,TTS,Sherpa VITS,English TTS Synthesis,English reference sentences,Clear 16kHz audio RTF < 0.5,16kHz audio generated (RTF 0.173),PASS,N/A
+TC-TTS-02,TTS,Sherpa VITS,Hindi TTS Synthesis,Hindi Priyamvada VITS model,Clear 22.05kHz Devanagari speech,22.05kHz audio generated (RTF 0.266-0.336),PASS,N/A
+TC-TTS-03,TTS,Sherpa VITS,Hindi Language Tag Aliases,hi / hi-IN / hi_IN,All aliases route to Hindi engine,All 3 aliases synthesized 22.05kHz audio,PASS,N/A
+TC-TTS-04,TTS,Sherpa VITS,Unsupported Language Rejection,Tamil (ta) / Telugu (te) / etc.,Graceful error without engine crash,Throws UnsupportedTtsLanguageException,PASS,N/A
+TC-TTS-05,TTS,Sherpa VITS,TTS Lifecycle Teardown & Reinit,Release -> Reinitialize -> Synthesize,Re-creates native session cleanly,Re-synthesized successfully,PASS,N/A
+TC-TTS-06,TTS,Playback,AudioTrack Mono Rendering,Mono PCM16 @ 16kHz & 22.05kHz,Clean playback without underflow,Rendered sequentially via Mutex,PASS,N/A
+TC-LANG-01,Languages,Multi-Lang,English (en),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,STT 8.29% WER / TTS 16kHz working,PASS,N/A
+TC-LANG-02,Languages,Multi-Lang,Hindi (hi),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS working / STT 119% WER (Romanized),FAIL,P1
+TC-LANG-03,Languages,Multi-Lang,Gujarati (gu),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS throws UnsupportedTtsLanguageException,FAIL,P1
+TC-LANG-04,Languages,Multi-Lang,Marathi (mr),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS throws UnsupportedTtsLanguageException,FAIL,P1
+TC-LANG-05,Languages,Multi-Lang,Kannada (kn),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS throws UnsupportedTtsLanguageException,FAIL,P1
+TC-LANG-06,Languages,Multi-Lang,Malayalam (ml),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS throws UnsupportedTtsLanguageException,FAIL,P1
+TC-LANG-07,Languages,Multi-Lang,Tamil (ta),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS throws UnsupportedTtsLanguageException,FAIL,P1
+TC-LANG-08,Languages,Multi-Lang,Telugu (te),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS throws UnsupportedTtsLanguageException,FAIL,P1
+TC-LANG-09,Languages,Multi-Lang,Odia (or),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS throws UnsupportedTtsLanguageException,FAIL,P1
+TC-LANG-10,Languages,Multi-Lang,Bengali (bn),Language select -> STT -> Packet -> TTS,Physical E2E working & validated,TTS throws UnsupportedTtsLanguageException,FAIL,P1
+TC-UI-01,UI/UX,Control,Receiver & Transmitter Buttons,Toggle between roles,Visually toggle and update config,Toggles active state and styling,PASS,N/A
+TC-UI-02,UI/UX,Control,IP Input Field Validation,Enter IP or blank IP,Validate before connecting,Shows error on blank IP upon connect tap,PASS,N/A
+TC-UI-03,UI/UX,Control,PTT Button Press & Stop,Toggle PTT recording,Start/stop audio capture,Updates PTT styling and state label,PASS,N/A
+TC-UI-04,UI/UX,Display,Transcript Display Formatting,Transmitted/Received messages,Format with language badge,Displays formatted text and badges,PASS,N/A
+TC-UI-05,UI/UX,Connection,Connection Dot Indicator Colors,Connecting / Connected / Failed,Color dot: Amber / Green / Red,Updates color and state text,PASS,N/A
+TC-PERM-01,Permissions,Audio,Microphone Permission Granted,RECORD_AUDIO granted,Transceiver starts recording,Starts capture successfully,PASS,N/A
+TC-PERM-02,Permissions,Audio,Microphone Permission Denied,RECORD_AUDIO denied,Display clear error banner,Shows PERMISSION DENIED banner,PASS,N/A
+TC-PERF-01,Performance,Memory,RAM Footprint Idle / Startup,App launch on Device A,RAM under 300MB,PSS: ~79MB Native: ~339MB,PASS,N/A
+TC-PERF-02,Performance,Memory,RAM Footprint Dual TTS Models,English + Hindi VITS loaded,RAM under 1GB,PSS: ~858MB Native: ~835MB,PASS,N/A
+TC-PERF-03,Performance,Stability,Rapid 5-Packet Burst,Send 5 messages in 200ms,Sequential queue playback no crash,Handled without crash,PASS,N/A
+TC-DEMO-01,Demo,Physical,English Voice E2E on Hotspot,Device A speak -> Hotspot -> Device B TTS,Hear synthesized speech on Device B,Demonstrated pass on hotspot,PASS,N/A
+TC-DEMO-02,Demo,Physical,Hindi Voice E2E on Hotspot,Device A speak Hindi -> Device B TTS,Hear Hindi speech on Device B,TTS works / STT Romanized mismatch,FAIL,P1

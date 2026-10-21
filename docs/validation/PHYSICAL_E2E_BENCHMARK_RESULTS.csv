@@ -1,0 +1,11 @@
+trial_id,language,status,reference_text,stt_hypothesis,stt_latency_ms,text_payload_bytes,protocol_header_bytes,wire_frame_bytes,transit_latency_ms,tts_synthesis_latency_ms,tts_rtf,playback_duration_ms,total_e2e_latency_ms,recognition_correctness,playback_success
+EN-01,en,IMPLEMENTED,"Hello, this is a communication test.",,37,33,74,,,,,,,
+EN-02,en,IMPLEMENTED,"The mission starts at nine in the morning.",,42,33,79,,,,,,,
+EN-03,en,IMPLEMENTED,"Send the emergency message immediately.",,39,33,76,,,,,,,
+EN-04,en,IMPLEMENTED,"The system works without internet connectivity.",,47,33,84,,,,,,,
+EN-05,en,IMPLEMENTED,"This message is transmitted as semantic text.",,45,33,82,,,,,,,
+HI-01,hi,IMPLEMENTED,"नमस्ते, यह एक संचार परीक्षण है।",,78,33,115,,,,,,,
+HI-02,hi,IMPLEMENTED,"अभियान सुबह नौ बजे शुरू होगा।",,74,33,111,,,,,,,
+HI-03,hi,IMPLEMENTED,"आपातकालीन संदेश तुरंत भेजें।",,74,33,111,,,,,,,
+HI-04,hi,IMPLEMENTED,"यह प्रणाली बिना इंटरनेट के काम करती है।",,101,33,138,,,,,,,
+HI-05,hi,IMPLEMENTED,"यह संदेश अर्थपूर्ण पाठ के रूप में भेजा गया है।",,116,33,149,,,,,,,

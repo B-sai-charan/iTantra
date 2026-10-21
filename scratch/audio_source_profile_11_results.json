@@ -1,0 +1,158 @@
+[
+  {
+    "profile": "Profile A",
+    "source_name": "MediaRecorder.AudioSource.VOICE_RECOGNITION",
+    "source_id": 6,
+    "file_path": "scratch/audio_source_voice_recognition.wav",
+    "sha256": "f9d7328dc9c63ada0a632e966121a4827a6f430a684b3c7a9d27d7ab7e9d5548",
+    "signal": {
+      "sample_count": 128000,
+      "duration_sec": 8.0,
+      "mean": -0.9959140625,
+      "std_dev": 335.7766168580201,
+      "rms": 335.7780937962414,
+      "rms_dbfs": -39.78795151316829,
+      "peak_abs": 1596,
+      "peak_dbfs": -26.248340958900144,
+      "crest_factor": 4.75313914006699,
+      "clipping_count": 0,
+      "zero_pct": 0.1359375
+    },
+    "vad": {
+      "start_sample": 0,
+      "end_sample": 126464,
+      "start_ms": 0,
+      "end_ms": 7904,
+      "duration_ms": 7904
+    },
+    "spectral": {
+      "centroid": 1563.2198363940884,
+      "bandwidth": 1801.2644485940912,
+      "rolloff": 3230.4369918699185,
+      "flatness": 0.1593054662899111,
+      "zcr": 0.23518483231707318,
+      "band_pcts": {
+        "b0_250_pct": 15.617058850165286,
+        "b250_500_pct": 41.446132689105156,
+        "b500_1000_pct": 8.961250865512415,
+        "b1000_2000_pct": 14.852285975675253,
+        "b2000_4000_pct": 7.805641547013574,
+        "b4000_8000_pct": 11.317630072528416
+      }
+    },
+    "whisper": {
+      "raw_hypothesis": "[music]",
+      "normalized_hypothesis": "music",
+      "latency_ms": 2360,
+      "rtf": 0.295,
+      "wer_12_pct": 100.0,
+      "cer_12_pct": 94.74,
+      "wer_18_pct": 100.0,
+      "cer_18_pct": 95.4
+    }
+  },
+  {
+    "profile": "Profile B",
+    "source_name": "MediaRecorder.AudioSource.MIC",
+    "source_id": 1,
+    "file_path": "scratch/audio_source_mic.wav",
+    "sha256": "d2eead0f2c1ea14e4945e611801239369802acfe5bd54223cef44b85edecd9a2",
+    "signal": {
+      "sample_count": 128000,
+      "duration_sec": 8.0,
+      "mean": -1.6081171875,
+      "std_dev": 2247.6921977673956,
+      "rms": 2247.692773033119,
+      "rms_dbfs": -23.274259715121843,
+      "peak_abs": 11967,
+      "peak_dbfs": -8.749292878604319,
+      "crest_factor": 5.324126207805212,
+      "clipping_count": 0,
+      "zero_pct": 0.01640625
+    },
+    "vad": {
+      "start_sample": 0,
+      "end_sample": 128000,
+      "start_ms": 0,
+      "end_ms": 8000,
+      "duration_ms": 8000
+    },
+    "spectral": {
+      "centroid": 850.0114104005523,
+      "bandwidth": 1047.8764901194068,
+      "rolloff": 1487.0732931726907,
+      "flatness": 0.05080554562965822,
+      "zcr": 0.13903269327309237,
+      "band_pcts": {
+        "b0_250_pct": 51.140432534109195,
+        "b250_500_pct": 27.83704744305196,
+        "b500_1000_pct": 5.497181900884949,
+        "b1000_2000_pct": 8.566886284552917,
+        "b2000_4000_pct": 4.268889257252094,
+        "b4000_8000_pct": 2.6895625801485377
+      }
+    },
+    "whisper": {
+      "raw_hypothesis": "(music playing)",
+      "normalized_hypothesis": "music playing",
+      "latency_ms": 2448,
+      "rtf": 0.306,
+      "wer_12_pct": 100.0,
+      "cer_12_pct": 91.23,
+      "wer_18_pct": 100.0,
+      "cer_18_pct": 93.1
+    }
+  },
+  {
+    "profile": "Profile C",
+    "source_name": "MediaRecorder.AudioSource.DEFAULT",
+    "source_id": 0,
+    "file_path": "scratch/audio_source_default.wav",
+    "sha256": "5fd0bd41a6cada093ace02871fb63c3eaf15b4cb7389f8d88be028e458ca6695",
+    "signal": {
+      "sample_count": 128000,
+      "duration_sec": 8.0,
+      "mean": -0.9740234375,
+      "std_dev": 386.763463229505,
+      "rms": 386.76468971577214,
+      "rms_dbfs": -38.560062346589994,
+      "peak_abs": 3575,
+      "peak_dbfs": -19.243477776452373,
+      "crest_factor": 9.243346393972047,
+      "clipping_count": 0,
+      "zero_pct": 0.16953125
+    },
+    "vad": {
+      "start_sample": 8704,
+      "end_sample": 128000,
+      "start_ms": 544,
+      "end_ms": 8000,
+      "duration_ms": 7456
+    },
+    "spectral": {
+      "centroid": 769.9005974901759,
+      "bandwidth": 836.8707449676845,
+      "rolloff": 1272.0231681034484,
+      "flatness": 0.03149068070797927,
+      "zcr": 0.12046656115301724,
+      "band_pcts": {
+        "b0_250_pct": 17.85374610752624,
+        "b250_500_pct": 34.713616427696024,
+        "b500_1000_pct": 30.40210663418219,
+        "b1000_2000_pct": 6.263660216154266,
+        "b2000_4000_pct": 9.244728467151052,
+        "b4000_8000_pct": 1.522142147290271
+      }
+    },
+    "whisper": {
+      "raw_hypothesis": "I don't know what to do. I don't know what to do. I don't know what to do. I don't know what to do. I don't know what to do. I don't know what to do.",
+      "normalized_hypothesis": "i don t know what to do i don t know what to do i don t know what to do i don t know what to do i don t know what to do i don t know what to do",
+      "latency_ms": 8727,
+      "rtf": 1.0909,
+      "wer_12_pct": 350.0,
+      "cer_12_pct": 150.88,
+      "wer_18_pct": 233.33,
+      "cer_18_pct": 98.85
+    }
+  }
+]
